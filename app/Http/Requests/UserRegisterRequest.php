@@ -23,9 +23,9 @@ class UserRegisterRequest extends FormRequest
     {
         return [
             'name'=>'required|min:3',
-            'email'=> 'required',
+            'email'=> 'required|email|unique:users,email',
             'password'=> 'required|min:6',
-            'image'=>'required'
+             'image'=>'required' //|image|max:2024'
         ];
     }
 }
