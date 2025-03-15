@@ -50,7 +50,7 @@ class UserController extends Controller
                     'message'=>'Emailingizni tasdiqlang'
                 ]);
             }
-            $token=User::createToken('auth_token')->plainTextToken;
+            $token=User::createToken('user_token')->plainTextToken;
             return response()->json([
                 'success'=>true,
                 'token'=>$token,
